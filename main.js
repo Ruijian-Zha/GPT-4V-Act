@@ -116,8 +116,8 @@ app.whenReady().then(async () => {
     const image = await webview.capturePage();
     webview.send('observer', 'screenshot-end');
 
-    await fs.writeFile('tmp/screenshot.png', image.toPNG());
-    await controller.uploadImage('tmp/screenshot.png');
+    await fs.writeFile('/Users/chuci/Documents/GitHub/GPT-4V-Act/screenshot.png', image.toPNG());
+    await controller.uploadImage('/Users/chuci/Documents/GitHub/GPT-4V-Act/screenshot.png');
   }
 
   async function exportLabel() {
